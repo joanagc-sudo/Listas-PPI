@@ -1,12 +1,94 @@
+<!--Explique o que é o protocolo HTTP e como é usado na WEB ilustrando(com imagens) e explicações exemplos de requisições. 
+Descreva detalhes dos campos de um request que você capturar e response.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protocolo HTTP</title>
 </head>
+
 <body>
     <h1>Protocolo HTTP</h1>
-    <p>O Protocolo de Transferência de Hipertexto (<span title="Hypertext Transfer Protocol"><u>HTTP</u></span>) é um protocolo de comunicação utilizado para a transferência de dados na World Wide Web. Ele define como os mensagens são formatados e transmitidos entre navegadores e servidores web.</p>
+    <p>O Protocolo de Transferência de Hipertexto (<span title="Hypertext Transfer Protocol"><u>HTTP</u></span>) é um
+        protocolo de comunicação utilizado para a transferência de dados na World Wide Web. Ele define como as mensagens
+        são formatados e transmitidos entre navegadores e servidores web.</p>
+
+    <p>Para entender melhor como o HTTP funciona, é importante conhecer seus conceitos fundamentais, como solicitações e
+        respostas.</p>
+
+    <h2>O Modelo Requisição-Resposta (Request-Response)</h2>
+    <ul>
+        <img src="img/HTTP-request-response-model.webp" alt="Modelo Requisição-Resposta">
+        <li>Cliente servidor: O funcionamento básico baseia-se
+            na interação entre um cliente (geralmente um navegador web) e um servidor web. O cliente envia uma
+            solicitação HTTP para o servidor, que processa a solicitação e retorna uma resposta HTTP.</li>
+        </li>
+        <li>A Solicitação (Request): uma mensagem enviada pelo cliente ao servidor para solicitar um recurso ou realizar
+            uma ação.</li>
+        <li>A Resposta (Response): uma mensagem enviada pelo servidor ao cliente em resposta à solicitação, contendo o
+            recurso solicitado ou informações sobre o resultado da ação.</li>
+        </li>
+    </ul>
+    <h2>Estrutura de requisição</h2>
+    <!-- https://www.devmedia.com.br/http-requisicao-e-resposta/41217 -->
+
+    <p>Primeira linha da requisição: A primeira linha de uma requisição HTTP contém três elementos principais: o método
+        HTTP, o caminho do recurso solicitado e a versão do protocolo HTTP. Por exemplo, uma requisição típica pode ser
+        representada da seguinte forma:</p>
+    </p>
+    <p><mark>GET/HTTP/1.1</mark></p>
+    <p><strong>GET:</strong> é um método HTTP, também chamado de verbo HTTP, que indica ao servidor qual ação o cliente
+        deseja realizar. Nesse caso, o cliente solicita que o servidor envie ou consulte determinada informação.</p>
+    <p><strong>HTTP:</strong> Após o GET, aparece o caminho do recurso que está sendo solicitado ao servidor. Por
+        exemplo, para acessar a página de contatos de um site, esse caminho poderia ser /contatos.html.</p>
+    <p><strong>1.1:</strong> é a versão do protocolo HTTP que está sendo utilizada na comunicação entre o cliente e o
+        servidor. A versão 1.1 é uma das versões mais comuns do protocolo HTTP.</p>
+    <p><strong>Exemplo de requisição HTTP:</strong></p>
+
+    <p>Uma requisição HTTP também pode conter cabeçalhos, que representam informações adicionais. No exemplo abaixo
+        tanto o <span
+            title="informa o endereço do servidor que está sendo acessado, neste caso, devmedia.com.br"><u>Host</u></span>
+        quanto o <span
+            title="identifica o navegador e o sistema operacional utilizados pelo cliente, permitindo ao servidor saber, por exemplo, que o acesso está sendo feito pelo Chrome em um computador Windows."><u>User-Agent</u></span>
+        são cabeçalhos:</p>
+    <p></p><mark>Host: devmedia.com.br<br>
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)<br>
+        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36...</mark></p>
+
+    <h2>Estrutura de resposta</h2>
+    <p>Uma resposta HTTP também possui uma estrutura específica. A primeira linha da resposta contém o código de status,
+        que indica o resultado da solicitação feita pelo cliente. Por exemplo, um código de status 200 significa que a
+        solicitação foi bem-sucedida, enquanto um código 404 indica que o recurso solicitado não foi encontrado.</p>
+    <p><strong>Exemplo de resposta HTTP:</strong></p>
+    <p><mark>HTTP/1.1 200 OK<br>
+            Cache-Control: no-cache, must-revalidate<br>
+            Content-Type: text/html; charset=ISO-8859-1
+            ...</mark></p>
+    <p>Na primeira linha, é possível identificar a versão do protocolo HTTP, neste caso, HTTP/1.1 e o retorno 200 indica
+        que a solicitação foi bem-sucedida.</p>
+    <p>Em seguida, aparecem os cabeçalhos da resposta:</p>
+    <p>Cache-Control: que indica como o cliente deve manipular o conteúdo em cache<br>
+        Content-Type: que especifica o tipo de conteúdo retornado pelo servidor<br>
+    </p>
+
+    <h2>Exemplos reais</h2>
+    <p>Qualquer pessoa pode acessar informações sobre o modelo HTTP request-response utilizando ferramentas de
+        desenvolvedor em navegadores modernos, como o Google Chrome, Mozilla Firefox ou Microsoft Edge. Essas
+        ferramentas permitem inspecionar as requisições e respostas HTTP feitas pelo navegador ao acessar diferentes
+        sites.</p>
+    <p>Para acessar essas informações, basta abrir as ferramentas de desenvolvedor (geralmente pressionando F12 ou
+        clicando com o botão direito do mouse e selecionando "Inspecionar") e navegar até a aba "Network" (Rede). Nessa
+        aba, é possível visualizar todas as requisições HTTP feitas pelo navegador, incluindo detalhes sobre os métodos
+        utilizados, os cabeçalhos enviados e recebidos, os códigos de status das respostas e muito mais.</p>
+
+    <p><strong>Exemplo de requisição HTTP: página do IFSC Gaspar</strong></p>
+    <img src="img/request.png" alt="Exemplo de requisição HTTP: página do IFSC Gaspar">
+    <img src="img/response.png" alt="Exemplo de resposta HTTP: página do IFSC Gaspar">
+    </p>
 </body>
+
 </html>
