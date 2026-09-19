@@ -1,0 +1,175 @@
+<!--Crie uma página de currículo com as seguintes informações (pode ser fictício):
+Nome completo
+Foto (use a tag <img>)
+Contato (e-mail e telefone, com links funcionais mailto: e tel:)
+Breve descrição (usando <p>)
+Lista de habilidades técnicas (<ul> ou <ol>)
+Formação acadêmica (use <section>, <article> ou <div>)
+Experiência profissional (descrições curtas com <strong>, <em>, <mark>)
+Crie uma tabela com sua grade de horários fictícia (matérias, dias e horários).
+Crie um menu de navegação interno, com âncoras que levem para as seções (Exemplo: #formacao, #experiencia).
+Use os seguintes elementos em algum lugar da página:
+<div>, <span>, <p>, <b>, <em>, <strong>, <mark>, <sub>, <details> e <summary>.
+Use imagens e links externos (por exemplo: link para seu LinkedIn, fictício ou não).
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo</title>
+</head>
+<header>
+    <h1>Joana Gonçalves Cardoso</h1>
+    <img src="img/joana.jpg" alt="Foto de Joana Gonçalves Cardoso" width="200">
+    <div class="contato">
+        <h2 id="h2contato">Contato:</h2>
+        <ul>
+            <li><a href="mailto:joana.gc@aluno.ifsc.edu.br">joana.gc@aluno.ifsc.edu.br</a></li>
+            <li><a href="tel:+5511999999999"> (11) 99999-9999</a></li>
+        </ul>
+    </div>
+</header>
+
+<body>
+    <nav>
+        <a href="#h2contato">Contato</a>
+        <a href="#h2descricao">Descrição</a>
+        <a href="#h2habilidades">Habilidades Técnicas</a>
+        <a href="#h2formacao">Formação Acadêmica</a>
+        <a href="#h2formacao-complementar">Formação Complementar</a>
+        <a href="#h2experiencia">Experiência</a>
+        <a href="#h2grade-horarios">Grade de Horários</a>
+    </nav>
+    <div class="descricao">
+        <h2 id="h2descricao">Descrição</h2>
+        <p>Concluinte do <b>Curso Técnico Integrado em Informática</b> pelo <span title="Instituto Federal de Santa Catarina"><u>IFSC</u></span>,
+            com previsão de conclusão em 2026. Voluntária do projeto <strong>Elas Digitais</strong>, voltado à promoção
+            da participação feminina nas áreas de <span title="Ciência, Tecnologia, Engenharia e Matemática"><u>STEM</u></span>. Possui interesse em Matemática, programação, tecnologia e
+            projetos de pesquisa e extensão. Participa de <strong>olimpíadas científicas</strong>, com destaque para a
+            Matemática, e do Programa de Iniciação Científica da <span title="Olimpíada Brasileira de Matemática das Escolas Públicas"><u>OBMEP</u></span> desde 2022. Busca oportunidades de estágio e
+            desenvolvimento profissional na área de tecnologia, com foco em programação, desenvolvimento de software e
+            inovação tecnológica.</p>
+    </div>
+
+    <div class="habilidades">
+        <h2 id="h2habilidades">Habilidades Técnicas</h2>
+        <ul>
+            <li>Programação e informática</li>
+            <li>Arduino e eletrônica</li>
+            <li>Desenvolvimento de projetos científicos</li>
+            <li>Trabalho em equipe e colaboração</li>
+            <li>Matemática</li>
+            <li>Resolução de Problemas e Pensamento Crítico</li>
+        </ul>
+    </div>
+    <div class="formacao">
+        <h2 id="h2formacao">Formação Acadêmica</h2>
+        <p><mark>Ensino Fundamental</mark> - Escola Municipal Alberto Schmit (2013-2023)</p>
+        <p><mark>Ensino Médio</mark> - Instituto Federal de Santa Catarina (2024 - 2026)</p>
+    </div>
+    <div class="formacao-complementar">
+        <h2 id="h2formacao-complementar">Formação Complementar</h2>
+        <dl>
+            <p><mark>Programa de Iniciação Científica da <span title="Olimpíada Brasileira de Matemática das Escolas Públicas"><u>OBMEP</u></span></mark></p>
+            <dd>Turma regular: 2022 e 2023</dd>
+            <dd>Turma avançada: 2024 e 2025</dd>
+            <dd>Programa Mentores: 2026</dd>
+        </dl>
+    </div>
+    <div class="experiencia">
+        <h2 id="h2experiencia">Experiência</h2>
+        <p><mark>Participante do projeto Elas Digitais</mark> (2024-2026) - Participação em atividades de promoção da
+            participação feminina nas áreas de <em>STEM</em>, com foco em <strong>programação</strong> e
+            <strong>tecnologia</strong>, por meio de projetos de ensino, pesquisa e extensão.</p>
+        <p><mark>Participante de Olimpíadas Científicas</mark> (2022-2026) - Destaque em <strong>Matemática</strong>,
+            com participação ativa em competições e eventos relacionados à área.</p>
+        <p><mark>Monitora de Matemática</mark> (2026) - Auxílio no ensino de <strong>Matemática</strong> para estudantes
+            do ensino médio.</p>
+        <p><mark>Participação em eventos científicos</mark> (2024-2026) - Participação em conferências, seminários e
+            <span title="atividade prática"><u>workshops</u></span> relacionados à área de <strong><em>STEM</em></strong>.</p>
+    </div>
+
+    <footer>
+        <div class="grade-horarios">
+            <h2 id="h2grade-horarios">Grade de Horários</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horário</th>
+                        <th>Matéria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4">Segunda-feira</td>
+                        <td>07:20 - 09:30</td>
+                        <td>Matemática</td>
+                    </tr>
+                    <tr>
+                        <td>09:40 - 11:50</td>
+                        <td>Física</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 15:10</td>
+                        <td>Programação</td>
+                    </tr>
+                    <tr>
+                        <td>15:20 - 17:30</td>
+                        <td>Ciências da Computação</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terça-feira</td>
+                        <td>10:00 - 11:30</td>
+                        <td>Programação</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Quarta-feira</td>
+                        <td>13:00 - 14:30</td>
+                        <td>Eletrônica</td>
+                    </tr>
+                    <tr>
+                        <td>14:45 - 16:15</td>
+                        <td>Matemática</td>
+                    </tr>
+                    <tr>
+                        <td>16:30 - 18:00</td>
+                        <td>Física</td>
+                    <tr>
+                        <td rowspan="2">Quinta-feira</td>
+                        <td>15:00 - 16:30</td>
+                        <td>Ciências da Computação</td>
+                    </tr>
+                    <tr>
+                        <td>16:45 - 18:15</td>
+                        <td>Física</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Sexta-feira</td>
+                        <td>17:00 - 18:30</td>
+                        <td>Projeto de Pesquisa</td>
+                    </tr>
+                    <tr>
+                        <td>18:45 - 20:15</td>
+                        <td>Química</td>
+                    </tr>
+                </tbody>
+            </table>
+</body>
+
+<footer>
+
+    <p>
+    <details>
+        <summary>Mais informações disponíveis no <a href="http://lattes.cnpq.br/1129182000825515"
+                target="_blank">Currículo Lattes</a>.</summary>
+    </details>
+    </p>
+    <p><sub>Joana Gonçalves Cardoso - 2026</sub></p>
+</footer>
+
+</html>
