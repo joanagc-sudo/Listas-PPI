@@ -3,7 +3,7 @@ Descreva detalhes dos campos de um request que você capturar e response.
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -86,9 +86,31 @@ Descreva detalhes dos campos de um request que você capturar e response.
         utilizados, os cabeçalhos enviados e recebidos, os códigos de status das respostas e muito mais.</p>
 
     <p><strong>Exemplo de requisição HTTP: página do IFSC Gaspar</strong></p>
-    <img src="img/request.png" alt="Exemplo de requisição HTTP: página do IFSC Gaspar">
-    <img src="img/response.png" alt="Exemplo de resposta HTTP: página do IFSC Gaspar">
+    <img src="img/request.png" width="1000" height="400" alt="Exemplo de requisição HTTP: página do IFSC Gaspar">
+    <ul>
+        <li><strong>GET /web/campus-gaspar HTTP/1.1:</strong> indica que uma solicitação GET está sendo feita para o recurso /web/campus-gaspar usando a versão 1.1 do protocolo HTTP</li>
+        <li><strong>Accept:</strong> indica os tipos de conteúdo que o cliente pode processar</li>
+        <li><strong>Accept-Encoding:</strong> indica os tipos de codificação que o cliente pode processar</li>
+        <li><strong>Accept-Language:</strong> indica os idiomas que o cliente pode processar</li>
+        <li><strong>Cookie:</strong> contém informações de cookies enviados pelo cliente para o servidor</li>
+        <li><strong>Referer:</strong> indica a URL da página que originou a solicitação</li>
+        <li><strong>Sec-Fetch:</strong> fornece informações ao servidor sobre como a requisição foi realizada.</li>
+        <li><strong>User-Agent:</strong> contém informações sobre o navegador e o sistema operacional do cliente</li>
+    </ul>
+    <img src="img/response.png" width="1000" height="400" alt="Exemplo de resposta HTTP: página do IFSC Gaspar">
+    <ul>
+        <li><strong>Request URL:</strong> endereço solicitado: https://www.ifsc.edu.br/web/campus-gaspar.</li>
+        <li><strong>Request Method:</strong> GET, utilizado para solicitar o conteúdo de uma página.</li>
+        <li><strong>Status Code:</strong> 200 OK, indicando que a requisição foi processada com sucesso.</li>
+        <li><strong>Server:</strong> informa que o servidor utiliza nginx.</li>
+        <li><strong>Content-Type:</strong> indica que a resposta contém um documento HTML com codificação UTF-8.</li>
+        <li><strong>Transfer-Encoding:</strong> chunked, indicando que os dados podem ser enviados em partes.</li>
+        <li><strong>Connection:</strong> keep-alive, mantendo a conexão disponível para outras requisições.</li>
+        <li><strong>Content-Encoding:</strong> gzip, mostrando que o conteúdo foi comprimido antes de ser enviado.</li>
+    </ul>
     </p>
+
+
 </body>
 
 </html>
