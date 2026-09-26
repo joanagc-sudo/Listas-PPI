@@ -1,0 +1,184 @@
+/*
+Crie um arquivo CSS externo e vincule aos 3 arquivos HTML.
+Estilize os documentos, crie regras com propriedades algumas delas::
+Fundo da página com background-color
+Cor do texto principal (color)
+Fonte geral (font-family: Arial, sans-serif;)
+Tabela com bordas (border), espaçamento (padding)
+Formulário com inputs arredondados (border-radius), margens e cores nos botões (background-color, hover)
+Use um seletor de :hover para melhorar a usabilidade nos links do menu e botões do formulário.
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color: #f7f9f7;
+   color: #2a4b32ed;
+   font-family: 'Cabin', sans-serif;
+   font-weight: 400;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h1{
+    
+    padding: 1rem;
+    background-color: #5a412b;
+    color: #ebf3ed;
+
+}
+
+h2{
+    color: #5a412b;
+    font-size: 1.5rem;
+    
+}
+
+mark {
+    color: #ebf3ed;
+    background-color: #5a6b5b;
+    padding: 1px;
+    border-radius: 3px;
+}
+
+span{
+    color: #5a412b;
+}
+
+a{
+    color: #3c320e;
+
+}
+
+img{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #5a6b5b;
+    color: #ebf3ed;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+td{
+    color: #331f19;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+tfoot td{
+    background-color: rgba(83, 61, 32, 0.051);
+}
+
+details{
+    background-color: #c3d1c4;
+
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+summary{
+    color: #331F19;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+ol{
+    margin-left: 1.5rem;
+}
+
+ul li, ol li, dt{
+    padding: 0.2rem;
+    background-color: rgba(83, 61, 32, 0.051);
+}
+
+dd{
+    padding: 1rem;
+}
+
+.dep{
+    text-align: justify;
+    color: #f7f9f7;
+    background-color: #827467;
+    padding: 1rem;
+}
+input[type = "text"], input[type = "email"], input[type = "password"], input[type = "date"]{
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid #5a6b5b;
+    border-radius: 4px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+::placeholder{
+    color: #bac8ba
+}
+
+select{
+    cursor: pointer;
+    background-color: #90a591;
+    color: #f7f9f7;
+    border-radius: 5px;
+    border: none;
+    width: 50%;
+}
+
+fieldset{
+    border: 2px solid #5a6b5b;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+legend{
+    color: #331F19;
+    padding: 0 0.5rem;
+}
+
+textarea{
+    width: 100%;
+    border: 2px solid #7e8a7e;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'Cabin', sans-serif;
+    padding: 0.5rem;
+}
+textarea::placeholder{
+    padding: 0.5rem;
+}
+
+button{
+    background-color: #5a6b5b;
+    border: none;
+    padding: 0.8rem;
+    color: #f7f9f7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+mark span{
+    color:#b6d1b7;
+}
