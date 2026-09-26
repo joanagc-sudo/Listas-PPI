@@ -1,0 +1,85 @@
+<!--Crie um formulário de contato com os seguintes campos, é evidente que ainda não encaminharemos para nenhum servidor, preocupe-se apenas e construir os campos do formulário usando a tag form e inputs, selects e options de entrada adequadamente.:
+Nome (obrigatório)
+E-mail (obrigatório, tipo email)
+Assunto
+Estado  (tag Option)
+Mensagem
+Botão de envio
+O formulário deve:
+Utilizar tag label para cada campo e um atributo id para cada elemento de entrada de dados como input
+Ter validação básica via HTML (campo numérico e-mail) (required)
+Incluir placeholder nos campos
+Inclua uma mensagem no topo da página com instruções para o usuário.
+Adicione um link de navegação que volte para o 3_curriculo.html.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Formulário de contato</h1>
+    <p>Tem alguma dúvida sobre minha trajetória acadêmica, experiências ou projetos? Entre em contato comigo abaixo.</p>
+    <fieldset>
+        <legend>Envie uma mesagem</legend>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome..."><br>
+        
+        <label for = "email">Email:</label><br>
+        <input type="email" id="email" name="email"placeholder="Digite seu email..."><br>
+
+        <!-- Estado -->
+            <label for="estado">Estado:</label><br>
+            <select id="estado" name="estado">
+                
+                <option value="" disabled selected>
+                    Selecione seu estado
+                </option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select><br>
+
+        <label for = "assunto">Assunto:</label><br>
+        <input type="assunto" id="assunto" name="assunto"placeholder="Digite o assunto..."><br>
+        
+        
+        <label for = " Mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50"
+            placeholder="Digite sua mensagem..."></textarea><br>
+        <button onclick="alert('Mensagem enviada com sucesso!')">Envie a mensagem</button>
+    </fieldset>
+    <a href="3_curriculo.html">Voltar para o currículo</a>
+</body>
+
+</html>
