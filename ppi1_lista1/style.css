@@ -135,7 +135,7 @@ input[type = "text"], input[type = "email"], input[type = "password"], input[typ
     background-color: transparent;
 }
 ::placeholder{
-    color: #bac8ba
+    color: #bac8ba;
 }
 
 select{
@@ -179,6 +179,48 @@ button{
     cursor: pointer;
 }
 
+button:hover{
+background-color: #90a591;
+    border-radius: 8px;
+}
 mark span{
     color:#b6d1b7;
+}
+
+
+.menu {
+    background-color: #5a6b5b;
+;
+    padding: 15px 20px;
+}
+
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.menu a {
+    color: white;
+    text-decoration: none; 
+    text-align: center;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #90a591;
+    color: white;
+    border-radius: 8px;
 }
