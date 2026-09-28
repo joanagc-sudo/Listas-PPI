@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Display C</title>
+
+    <style>
+
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+        #box1 {
+            background-color: blue;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+
+        #box2 {
+            background-color: green;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+        }
+
+        #box3 {
+            background-color: red;
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        #box4 {
+            background-color: yellow;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        #box5 {
+            background-color: magenta;
+            position: fixed;
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%, 50%);
+        }
+    </style>
+</head>
+
+<body>
+   <!--<h1>Display C</h1>
+    <p>Explicação: ao aplicar o display: inline-block, os elementos passam a se alinhar lado a lado na horizontal, mas ainda tem propriedades de bloco, como altura e largura. Ao combinar com o position fixed é possível determinar em qual posição em relação a tela o bloco irá ficar, assim, obtem-se a disposição demonstrada. O diferencial para o bloco do centro é que, como o fixed se posiciona a partir do canto superior esquerdo, é necessário utilizar um transform para colocá-lo exatamente no centro.</p>-->
+    <div claas="container">
+
+        <div id="box1" class="box">box1</div>
+        <div id="box2" class="box">box2</div>
+        <div id="box3" class="box">box3</div>
+        <div id="box4" class="box">box4</div>
+        <div id="box5" class="box">box5</div>
+
+    </div>
+</body>
+
+</html>
