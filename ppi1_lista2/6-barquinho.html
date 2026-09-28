@@ -7,17 +7,89 @@
     <title>Animate</title>
     <style>
         body {
-            background-color: rgb(215, 232, 247);
+            background-color: rgb(160, 206, 246);
+        }
+       
+        .nuvem#n1{
+            animation: nuvem 30s linear infinite;
+            position: fixed;
+            left: 70%;
+            top:-25%;
+            font-size: 250px;
+        }
+        .nuvem#n2{
+            animation: nuvem 40s ease-in infinite;
+            position: fixed;
+            left:25%;
+            top:0%;
+            font-size: 200px;
+        }
+        .nuvem#n3{
+            animation: nuvem 20s ease-in infinite;
+            position: fixed;
+            top:-40%;
+            font-size: 300px;
+            transform: translateX(50vw)
+        }
+        .marC{
+            position: fixed;
+            left: 0;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            line-height: 0;
         }
         .barcoMar{
               position: fixed;
-              bottom:25%;
+              bottom:10%;
             animation: navegar 8s linear infinite 
         }
         .barco {
             animation: ondas 1.5s ease-in-out infinite;
         }
+        .marE {
+            position: fixed;
+            left: 0;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+            
+        }
 
+        .marC {
+            bottom: 50px; 
+            animation: mar linear infinite;
+        } 
+
+        .marE {
+            bottom: 0px;
+            animation: mar linear infinite;
+        }
+
+        .marC img, .marE img {
+            width: 100vw;   
+            height: auto;   
+            display: block;
+        }
+        @keyframes mar {
+            0% {
+                transform: translateY(-50vh);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+        @keyframes nuvem {
+            0% {
+                transform: translateX(-50vw);
+            }
+
+            100% {
+                transform: translateX(100vw);
+            }
+        }
         @keyframes navegar {
             0% {
                 transform: translateX(-100vw);
@@ -39,8 +111,16 @@
 </head>
 
 <body>
+
+<p class="nuvem" id="n1">☁️</p>
+<p class="nuvem" id="n2">☁️</p>
+<p class="nuvem" id="n3">☁️</p>
+<p class="marC"><img src="img/mar_claro.png" alt="mar" width="200px"></p>
+<div class="container">
     <div class = "barcoMar">
     <p class="barco"><img src="img/barco.png" alt="barco" width="200px"></p>
+</div>
+<p class="marE"><img src="img/mar_escuro.png" alt="mar" width="200px"></p>
 </div>
 </body>
 
