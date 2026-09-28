@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout perfil</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            min-height: 100vh;
+            margin: 0;
+            background-color: darkgray;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+            width: 600px;
+            height: 600px;
+            padding: 20px;
+            border: 2px solid black;
+            box-sizing: border-box;
+            background-color: #eee;
+        }
+
+        .perfil {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nome,
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+
+        img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="perfil">
+            <div class="imagem"><img src="img/Perfil 1.jpg" alt="Perfil 1"></div>
+            <div class="informa">
+                <p class="nome"><strong>Linda Hart</strong></p>
+                <p class="loc">6765 Shady Ln Dr</p>
+            </div>
+        </div>
+        <div class="perfil">
+            <div class="imagem"><img src="img/Perfil 2.jpg" alt="Perfil 2"></div>
+            <div class="informa">
+                <p class="nome"><strong>Roger Medina</strong></p>
+                <p class="loc">2420 Paddock Way</p>
+            </div>
+        </div>
+        <div class="perfil">
+            <div class="imagem"><img src="img/Perfil 3.jpg" alt="Perfil 3"></div>
+            <div class="informa">
+                <p class="nome"><strong>Dean Sullivan</strong></p>
+                <p class="loc">6727 Airplane Ave</p>
+            </div>
+        </div>
+
+       <div class="perfil">
+            <div class="imagem"><img src="img/Perfil 4.jpg" alt="Perfil 4"></div>
+            <div class="informa">
+                <p class="nome"><strong>Elizabeth Austin</strong></p>
+                <p class="loc">6685 Blossom Hill Rd</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
