@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <style>
+        body {
+            background-color: rgb(215, 232, 247);
+        }
+        .barcoMar{
+              position: fixed;
+              bottom:25%;
+            animation: navegar 8s linear infinite 
+        }
+        .barco {
+            animation: ondas 1.5s ease-in-out infinite;
+        }
+
+        @keyframes navegar {
+            0% {
+                transform: translateX(-100vw);
+            }
+
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+        @keyframes ondas {
+            0%, 100% {
+                transform: translateY(0px) rotate(10deg);
+            }
+            50% {
+                transform: translateY(50px) rotate(-10deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class = "barcoMar">
+    <p class="barco"><img src="img/barco.png" alt="barco" width="200px"></p>
+</div>
+</body>
+
+</html>
