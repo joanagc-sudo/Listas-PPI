@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varias cores</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor de fundo</title>
+
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .box {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class = "box" id= "b1"></div>
+        <div class = "box" id= "b2"></div>
+        <div class = "box" id= "b3"></div>
+        <div class = "box" id= "b4"></div>
+        <div class = "box" id= "b5"></div>
+        <button id="btnSortear">Sortear</button>
+        <h2 id="result">-</h2>
+    </div>
+
+    <script>
+        btnSortear = document.getElementById("btnSortear");
+        result = document.getElementById("result");
+
+        btnSortear.addEventListener("click", () => {
+            mudarCor('#b1');
+            mudarCor('#b2');
+            mudarCor('#b3');
+            mudarCor('#b4');
+            mudarCor('#b5');
+        });
+
+        function mudarCor(container){
+            minimo = 0;
+            maximo = 255;
+
+            const elemento = document.querySelector(container);
+            random1 = Math.floor(
+                Math.random() * (maximo - minimo + 1)
+            );
+            random2 = Math.floor(
+                Math.random() * (maximo - minimo + 1)
+            );
+            random3 = Math.floor(
+                Math.random() * (maximo - minimo + 1)
+            );
+            elemento.style.backgroundColor = `rgb(${random1}, ${random2}, ${random3})`;
+            
+            result.innerHTML = "(" + random1 + "," + random2 + "," +random3+")";
+        }
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
