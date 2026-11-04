@@ -1,102 +1,127 @@
-<!--✅ 5. Gerador de Números Aleatórios com Intervalo Personalizado(Inteiros)
-Arquivo: 5.html
-Crie um documento HTML que gere números aleatórios com base em um intervalo informado pelo usuário.
-Crie um documento HTML que gere números aleatórios com base em um intervalo informado pelo usuário.
-Crie uma página com um <h1> contendo o texto "Sorteio de Números", um botão com o texto "Sortear" e um parágrafo identificado como resultado.
-Implemente uma função chamada sortear que gere um número aleatório entre 1 e 100 e associe essa função ao evento de clique do botão.
-Adicione dois campos <input> para que o usuário possa informar os valores mínimo e máximo do intervalo do sorteio.
-Mantenha na tela uma lista com valores sorteados e em memória em um array com valores sorteados.
-A cada sorteio  verifique se o número já foi sorteado, caso sim, escreva na tela do usuário ao lado do número quantas vezes ele foi sorteado. Sugestão: Array de Objetos.
--->
+    <!--✅ 5. Gerador de Números Aleatórios com Intervalo Personalizado(Inteiros)
+    Arquivo: 5.html
+    Crie um documento HTML que gere números aleatórios com base em um intervalo informado pelo usuário.
+    Crie um documento HTML que gere números aleatórios com base em um intervalo informado pelo usuário.
+    Crie uma página com um <h1> contendo o texto "Sorteio de Números", um botão com o texto "Sortear" e um parágrafo identificado como resultado.
+    Implemente uma função chamada sortear que gere um número aleatório entre 1 e 100 e associe essa função ao evento de clique do botão.
+    Adicione dois campos <input> para que o usuário possa informar os valores mínimo e máximo do intervalo do sorteio.
+    Mantenha na tela uma lista com valores sorteados e em memória em um array com valores sorteados.
+    A cada sorteio  verifique se o número já foi sorteado, caso sim, escreva na tela do usuário ao lado do número quantas vezes ele foi sorteado. Sugestão: Array de Objetos.
+    -->
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sorteador</title>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Sorteador</title>
 
-        <style>
-        .container {
-            display: flex;
-            height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+            <style>
+            .container {
+                display: flex;
+                height: 100vh;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
 
-        .inputs {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 10px;
-        }
-    </style>
-    </head>
-    <body>
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+        </style>
+        </head>
+        <body>
 
-        <div class="container">
-            <h1>Sorteio de números</h1>
-            <div class="esquerda">
-                <div class="form">
-                    <div class="inputs">
-                        <label for="min">Mínimo</label>
-                        <input type="number" id="min" value="1">
+            <div class="container">
+                <h1>Sorteio de números</h1>
+                <div class="esquerda">
+                    <div class="form">
+                        <div class="inputs">
+                            <label for="min">Mínimo</label>
+                            <input type="number" id="min" value="1">
+                        </div>
+
+                        <div class="inputs">
+                            <label for="max">Máximo</label>
+                            <input type="number" id="max" value="100">
+                        </div>
                     </div>
-
-                    <div class="inputs">
-                        <label for="max">Máximo</label>
-                        <input type="number" id="max" value="100">
-                    </div>
+                    <button id="btnSortear" onclick="sortear();">Sortear</button>
+                    <h2 id="result">-</h2>
                 </div>
-                <button id="btnSortear" onclick="sortear();">Sortear</button>
-                <h2 id="result">-</h2>
+
+                <div class="direita">
+                    <h2>Resultados</h2>
+                    <div id="historico"></div>
+                </div>
             </div>
 
-            <div class="direita">
-                <h2>Resultados</h2>
-                <div id="historico"></div>
-            </div>
-        </div>
+            <script>
+            btnSortear = document.getElementById("btnSortear");
+            min = document.getElementById("min");
+            max = document.getElementById("max");
+            result = document.getElementById("result");
+            historico = document.getElementById("historico");
 
-        <script>
-        btnSortear = document.getElementById("btnSortear");
-        min = document.getElementById("min");
-        max = document.getElementById("max");
-        result = document.getElementById("result");
-        historico = document.getElementById("historico");
+            var cont = [];
+            var valoresSorteados = [];
 
-        var valoresSorteados = [];
+            function sortear(){
 
-        function sortear(){
+                let existe = false;
+
+                minimo = Number(min.value);
+                maximo = Number(max.value);
+
+                if (min.value === "" || max.value === "") {
+                    result.innerHTML = "Preencha os dois campos!";
+                    return;
+                }
+
+                if (minimo > maximo) {
+                    result.innerHTML = "O mínimo deve ser menor que o máximo!";
+                    return;
+                }
+
+                random = Math.floor(
+                    Math.random() * (maximo - minimo + 1)
+                ) + minimo;
+
+                result.innerHTML = random;
+
+                
+                valoresSorteados.forEach(numero => {
+                    if(numero.random==random){
+                        numero.cont++;
+                        existe = true;
+                    }
+                });
+                if(!existe){
+                    valoresSorteados.push({
+                        random: random,
+                        cont: 1});
+                }
+
+                historico.innerHTML = "";
+
+                valoresSorteados.forEach(numero => {
+                    span = document.createElement("span");
+                    if(numero.cont>1){
+                    span.textContent = numero.random + "(" + numero.cont + ")" ;
+                    } else{
+                    span.textContent = numero.random + " ";
+                    }
+                    historico.appendChild(span);
+                })
+                
+
+                
+
+            }
             
-            minimo = Number(min.value);
-            maximo = Number(max.value);
+        </script>
 
-            if (min.value === "" || max.value === "") {
-                result.innerHTML = "Preencha os dois campos!";
-                return;
-            }
-
-            if (minimo > maximo) {
-                result.innerHTML = "O mínimo deve ser menor que o máximo!";
-                return;
-            }
-
-            random = Math.floor(
-                Math.random() * (maximo - minimo + 1)
-            ) + minimo;
-
-            result.innerHTML = random;
-
-            valoresSorteados.push(random);
-
-            span=document.createElement("span");
-            span.textContent = random + " ";
-            historico.appendChild(span);
-
-        }
-        
-    </script>
-
-    </body>
-</html>
+        </body>
+    </html>
